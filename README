@@ -1,3 +1,5 @@
+Acest proiect ilustrează un algoritm de compresie a imaginilor folosind arbori quadtree, o tehnică eficientă în special pentru imagini cu regiuni omogene.
+
 STRUCTURILE:
 Mi-am declarat structurile pentru Pixel, arbore, nod de coada si coada;
 
