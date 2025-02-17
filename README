@@ -1,0 +1,41 @@
+STRUCTURILE:
+Mi-am declarat structurile pentru Pixel, arbore, nod de coada si coada;
+
+Functiile pentru coada:
+
+initQueue - imi initializeaza coada;
+isEmptyQueue - verifica daca este goala coada;
+enqueue - adauga elemente in coada;
+dequeue - scoate elementele din coada;
+
+Functiile pentru arbore:
+
+create_quadtree_node: - initializeaza
+
+prag_divizare: - calculeaza pragul ce determina daca se divizeaza sau nu matricea;
+
+arbore_compresie: - imi construieste arborele;
+                 - daca pragul de divizare este 1, apelez recursiv functia pentru fiecare submatrice nou formata;
+                 - daca este 0 recalculez red, green, blue;
+                 - returnez arborele;
+
+nr_niveluri: - verific daca root == NULL, caz in care returnez 0;
+	     - apelez recursiv functia pentru fiecare copil : ss, ds, dj, sj;
+	     - imi iau ca pragul de nivele max sa fie egal cu cel al copilului stanga
+	     - verific acest numar cu cel rezultat de la ceilalti copii
+	     - daca gasesc un caz in care nu este max, acesta ia noua valoare maxima; 
+
+nr_frunze: - verific daca gasesc un nod frunza
+           - calculez recursiv numarul de noduri frunza al copiilor;
+
+parcurgere_nivel: - functie care realizeaza parcurgerea
+		   - primul nod pe care il gasesc care nu are copii este nodul corespunzator zonei din imaginea nedivizata cu dimensiunea laturii patratului cel mai mare;
+		   - primesc ca argument numarul total de nivele
+		   - din acesta scad 1 de fiecare data cand apelez recursiv functia
+		   - in functia main salvez numarul returnat de aceasta functie in variabila parc_niv si pentru a afla numarul de nivele parcurse dorit de mine va trebui sa scad din numarul total de nivele aceasta variabila.  
+
+MAIN:
+In functia main realizez citirea din fisier si scrierea in fisier. 
+Informatiile dorite imi sunt furnizate prin apelarea functiilor.
+Aceste informatii vor fi scrise in fisierele de iesire.
+
